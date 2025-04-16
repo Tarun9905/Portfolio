@@ -1,4 +1,5 @@
 import React from 'react';
+// import '.'; // Make sure this CSS file is in the same folder
 
 const SourceOne = () => {
   const htmlCode = `<!DOCTYPE html>
@@ -45,22 +46,22 @@ const SourceOne = () => {
     </section>
 </body>
 </html>`;
-const css = `body {
+
+  const css = `body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #1e1e1e, #333);
   color: white;
-  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .wrapper {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
@@ -119,32 +120,54 @@ a:hover {
   color: #fff;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.2rem;
   }
+
   h2 {
     font-size: 1.5rem;
   }
+
   .wrapper {
     padding: 1.5rem;
   }
+
   p {
     font-size: 1rem;
   }
 }
-`;
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .wrapper {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}`;
 
   return (
     <div>
       <h2>HTML Code :</h2>
-      <pre style={{ background: '#222', color: '#0f0', padding: '15px', borderRadius: '5px', overflowX: 'auto' }}>
-        {htmlCode}
-      </pre>
-      <h2>Css:</h2>
-      <pre style={{ background: '#222', color: '#0f0', padding: '15px', borderRadius: '5px', overflowX: 'auto' }}>
-        {css}
-      </pre>
+      <pre className="code-block">{htmlCode}</pre>
+
+      <h2>CSS :</h2>
+      <pre className="code-block">{css}</pre>
     </div>
   );
 };

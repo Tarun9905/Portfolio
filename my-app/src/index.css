@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.code-block {
+  background: #222;
+  color: #0f0;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+/* Reduce font size on tablets */
+@media (max-width: 768px) {
+  .code-block {
+    font-size: 0.7rem;
+  }
+}
+
+/* Reduce font size further on mobile */
+@media (max-width: 480px) {
+  .code-block {
+    font-size: 0.4rem;
+  }
+}
