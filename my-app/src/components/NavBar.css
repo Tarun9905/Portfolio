@@ -1,0 +1,29 @@
+/* Style for active Nav.Link items */
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: #007bff; /* Background color for active item */
+    color: white;
+    border-radius: 4px;
+  }
+  
+  /* Style for the collapsed menu in responsive mode */
+  .navbar-dark .navbar-collapse .nav-link.active {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Hover effect for menu items */
+  .navbar-dark .navbar-nav .nav-link:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Ensure the toggle button and collapsed menu look good */
+  .navbar-dark .navbar-toggler {
+    border-color: white;
+  }
+  
+  /* Optional: Style for the collapsed menu background */
+  .navbar-collapse {
+    background-color: black;
+  }
